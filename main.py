@@ -1,6 +1,6 @@
 ```python
 class Employee:
-    def __init__(self, emp_id, name, position, salary=0):
+    def __init__(self, emp_id, name, position, salary):
         self.id = emp_id
         self.name = name
         self.position = position
@@ -9,16 +9,23 @@ class Employee:
     def __str__(self):
         return f"ID: {self.id}, Name: {self.name}, Position: {self.position}, Salary: ${self.salary}"
 
-    def another_method(self):
-        pass
-
+    def get_details(self):
+        return f"ID: {self.id}, Name: {self.name}, Position: {self.position}, Salary: ${self.salary}"
 
 class EmployeeManagement:
     def __init__(self):
         self.employees = []
 
-    def add_employee(self, emp_id, name, position, salary=0):
-        employee = Employee(emp_id, name, position, salary)
+    def get_salary(self, id):
+        employee = self.find_employee(id)
+        if employee:
+            return employee.salary
+        else:
+            print("Employee not found!")
+            return None
+
+    def add_employee(self, employee_id, name, position, salary):
+        employee = Employee(employee_id, name, position, salary)
         self.employees.append(employee)
         print(f"Employee {name} added successfully!")
 
@@ -29,7 +36,7 @@ class EmployeeManagement:
             print(f"Employee {employee.name} removed successfully!")
         else:
             print("Employee not found!")
-    
+
     def display_employees(self):
         if self.employees:
             print("Employee List:")
@@ -43,14 +50,13 @@ class EmployeeManagement:
             if employee.id == id:
                 return employee
         print("Employee not found!")
-        return None
 
 if __name__ == "__main__":
     management = EmployeeManagement()
 
-    management.add_employee(1, "John Doe", "Manager", 60000)
-    management.add_employee(2, "Jane Smith", "Developer", 50000)
-    management.add_employee(3, "Emily Davis", "Designer", 45000)
+    management.add_employee(1, "John Doe", "Manager", 75000)
+    management.add_employee(2, "Jane Smith", "Developer", 65000)
+    management.add_employee(3, "Emily Davis", "Designer", 60000)
 
     management.display_employees()
 
@@ -59,6 +65,8 @@ if __name__ == "__main__":
     management.display_employees()
 
     emp = Employee(4, "Chris Brown", "Intern", 5000)
+
+    salary = management.get_salary(4)
 
     management.remove_employee(4)
 
