@@ -1,0 +1,12 @@
+{
+  "static_issues": 16,
+  "bug_desc": 0,
+  "total_sim_issues": 16,
+  "patches_generated": 22,
+  "files_changed": 1,
+  "chars_delta_total": -623,
+  "fallback_docstrings_added": 0,
+  "fallback_exceptions_annotated": 0,
+  "branch": "coniac-exhibit",
+  "repo": "adl5423/ExhibitB"
+}
