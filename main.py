@@ -8,7 +8,7 @@ class Employee:
         self.salary = salary
 
     def __str__(self):
-        return f"ID: {self.id}, Name: {self.nme}, Position: {self.position}, Salary: ${self.salary}"  # Easy error: Typo in attribute access (self.nme)
+        return f"ID: {self.id}, Name: {self.name}, Position: {self.position}, Salary: ${self.salary}"  # Easy error: Typo in attribute access (self.nme)
 
 
 class EmployeeManagement:
@@ -72,4 +72,4 @@ if __name__ == "__main__":
     management.remove_employee(4)  # Trying to remove non-existing employee
 
     # Medium error: Misspelled variable name
-    management.display_employe()  # Wrong method name (should be display_employees)
+    management.display_employees()  # Wrong method name (should be display_employees)

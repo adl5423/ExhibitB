@@ -1,0 +1,21 @@
+{
+  "repo": "adl5423/ExhibitB",
+  "branch": "coniac-ai",
+  "elapsed_sec": 71.6,
+  "static_issues": 16,
+  "github_issues": 0,
+  "total_sim_issues": 16,
+  "patches_generated": 2,
+  "files_changed": 1,
+  "chars_delta_total": 2,
+  "fallback_docstrings_added": 0,
+  "fallback_exceptions_annotated": 0,
+  "patches_generated_similarity": 2,
+  "patches_generated_impl": 0,
+  "patches_applied_similarity": 1,
+  "patches_applied_impl": 0,
+  "pct_applied_total": 50.0,
+  "pct_applied_similarity": 50.0,
+  "pct_applied_impl": 0.0,
+  "impl_sources": []
+}
